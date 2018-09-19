@@ -39,4 +39,4 @@ console.log(fizzBuzz(45));
 console.log(fizzBuzz(-1));
 console.log(fizzBuzz('5'));
 
-
+module.exports = fizzBuzz;
