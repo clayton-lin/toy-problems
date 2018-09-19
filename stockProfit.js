@@ -1,12 +1,16 @@
-// Given an array of stock prices, what is the most profit you can make from a single purchase/sale of stock? You can only sell the stock after you have purchased it.
+// Given an array of stock prices, what is the most profit you 
+// can make from a single purchase/sale of stock? You can only 
+// sell the stock after you have purchased it.
 
 // Input : [2, 3, 10, 6, 4, 8, 1]
 // Output : 8
-// Explanation : The maximum maximum profit you can make is buying at $2 and selling at $10 for $8 profit
+// Explanation : The maximum maximum profit you can make is 
+// buying at $2 and selling at $10 for $8 profit
 
 // Input : [7, 9, 5, 6, 3, 2]
 // Output : 2
-// Explanation : The maximum maximum profit you can make is buying at $7 and selling at $9 for $2 profit
+// Explanation : The maximum maximum profit you can make is 
+// buying at $7 and selling at $9 for $2 profit
 
 // solution must be O(n)
 
