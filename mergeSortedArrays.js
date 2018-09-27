@@ -24,13 +24,20 @@ const mergeSortedArrays = (arrA, arrB) => {
     } else if (arrA[indA] > arrB[indB]) {
       merged.push(arrB[indB]);
       indB++;
+    } else if (!arrA[indA]) {
+      merged.push(arrB[indB]);
+      indB++;
+    } else {
+      merged.push(arrA[indA]);
+      indA++;
     }
   }
   
   return merged;
 }
 
+console.log(mergeSortedArrays([ 1, 3, 4, 5 ], [ 2, 4, 6, 8 ])); // [ 1, 2, 3, 4, 5, 6, 8 ]
+console.log(mergeSortedArrays([ 1, 3, 4, 5 ], [ 1, 3, 4, 5 ])); // [ 1, 3, 4, 5 ]
+
+
 module.exports = mergeSortedArrays;
-
-
-console.log(mergeSortedArrays([ 1, 3, 4, 5 ], [ 2, 4, 6, 8 ]));
