@@ -21,17 +21,26 @@ const stockProfit = arr => {
   }
   let smallest = arr[0];
   let largest = arr[0];
-  let largestDiff = largest - smallest;
+  let largestDiff = 0;
 
   for (let i = 1; i < arr.length; i++) {
+    if (typeof arr[i] !== 'number') {
+      return `error: element at index ${i} is not a number`;
+    }
     if (arr[i] > largest) {
       largest = arr[i];
+    }
+    if (arr[i] < smallest) {
       if (largest - smallest > largestDiff) {
         largestDiff = largest - smallest;
       }
+      smallest = arr[i];
+      largest = arr[i];
     }
-    if (arr[i] < smallest) {
-      smallest = smallest;
+    if (i === arr.length - 1) {
+      if (largest - smallest > largestDiff) {
+        largestDiff = largest - smallest;
+      }
     }
   }
 
@@ -43,12 +52,12 @@ const stockProfit = arr => {
 }
 
 
-
 console.log('test 1: ', stockProfit([2, 3, 10, 6, 4, 8, 1])); // 8
 console.log('test 2: ', stockProfit([7, 9, 5, 6, 3, 2])); // 2
 console.log('test 3: ', stockProfit([7, 12, 5, 2, 5, 2])); // 5
-console.log('test 4: ', stockProfit([7, 10, 5, 2, 3, 7])); // 7
+console.log('test 4: ', stockProfit([7, 10, 5, 2, 3, 7])); // 5
 console.log('test 5: ', stockProfit('7, 10, 5, 2, 3, 7')); // 'invalid'
-console.log('test 6: ', stockProfit([7, 1, 5, 2, 3, 3])); // 'you lost money'
+console.log('test 6: ', stockProfit([7, 1, 5, 2, 3, 3])); // '4'
+console.log('test 7: ', stockProfit([7, 1, '5', 2, 3, 3])); // 'error: element at index 2 is not number'
 
 module.exports = stockProfit;
