@@ -11,39 +11,6 @@
  * @return {number}
  */
 
-// const trap = (heights) => {
-//   let i = 0;
-//   let water = 0;
-//   let curHeight = 0;
-  
-//   while (i < heights.length) {
-//       curHeight = heights[i];
-//       if (heights[i + 1] < heights[i]) {
-//           const tuple = processValley(i, heights);
-//           console.log(tuple);
-//           i = tuple[0];
-//           water += tuple[1];
-//       } else {
-//           i++;
-//       }
-//   }
-  
-//   return water;
-// };
-
-// const processValley = (i, array) => {
-//   let water = 0;
-//   let peakHeight = array[i];
-  
-//   while (array[i] <= peakHeight) {
-//       water += peakHeight - array[i];
-//       console.log(i, peakHeight, array[i], water)
-//       i++;
-//   }
-  
-//   return [i, water];
-// }
-
 const trap = (heights) => {
   // horizontal approach
   let water = 0;
@@ -99,8 +66,4 @@ const trap = (heights) => {
   return water;
 };
 
-
-
-console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1])); // 6
-console.log(trap([2,0,2])); // 2
-console.log(trap([2,1,0,2]); // 3
+module.exports = trap;
