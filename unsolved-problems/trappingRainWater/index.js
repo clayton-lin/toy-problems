@@ -52,13 +52,12 @@ const trap = (heights) => {
   const elevations = {};
 
   heights.forEach((height, i) => {
-    console.log('------------------------------------')
-    console.log('index ', i)
-    console.log('elevations before: ', elevations);
+    // console.log('------------------------------------')
+    // console.log('index ', i)
+    // console.log('elevations before: ', elevations);
 
-    // if (height > 0) {
       if (height > highest) {
-        console.log('elevations will clear');
+        // console.log('elevations will clear');
         delete(elevations[0]);
         for (let h in elevations) {
           if (h > lowest) {
@@ -70,31 +69,31 @@ const trap = (heights) => {
         highest = height;
 
       } else if (elevations[height]) {
-        console.log('add water');
+        // console.log('add water');
         delete(elevations[0]);
         for (let h in elevations) {
           if (h <= height) {
             if (h > lowest) {
-              water += i - elevations[height];
+              water += i - elevations[h];
+            // console.log(`h: ${h}, i: ${i}, water added: ${i - elevations[h]}`)
             }
             delete(elevations[h]);
           }
         }
 
       } else {
-        console.log('add elevation');
+        // console.log('add elevation');
         lowest = height;
         const drop = heights[i - 1] - height;
-        console.log('drop', drop)
+        // console.log('drop', drop)
         elevations[height] = i + 1;
         for (let j = 1; j <= drop; j++) {
           elevations[height + j] = i;
         }
       }
-    // } 
 
-    console.log('elevations after: ', elevations);
-    console.log(`height: ${height}, highest: ${highest}, water: ${water}`);
+    // console.log('elevations after: ', elevations);
+    // console.log(`height: ${height}, highest: ${highest}, water: ${water}`);
   });
   
   return water;
