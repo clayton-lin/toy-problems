@@ -5,5 +5,5 @@ test('___ function should exist', () => {
 });
 
 test('', () => {
-  expect(___).toEqual();
+  expect(___()).toEqual();
 });
