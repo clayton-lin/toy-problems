@@ -1,3 +1,6 @@
+// Write function to check if two strings are anagrams of each other
+// Assume all characters are lower case and there are no spaces
+
 const validAnagram = (str1, str2) => {
     // if the length of both are not the same, the strings cannot be anagrams  
     if (str1.length !== str2.length) {
