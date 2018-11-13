@@ -1,8 +1,8 @@
+const ___ = () => {
 
 
 
 
+};
 
-
-
-module.exports = ;
+module.exports = ___;
