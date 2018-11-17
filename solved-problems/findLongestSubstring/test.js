@@ -24,6 +24,14 @@ test('Should return 9', () => {
   expect(findLongestSubstring('fredflintstone')).toEqual(9);
 });
 
+test('Should return 5', () => {
+  expect(findLongestSubstring('abcabcdacbdeabcabc')).toEqual(5);
+});
+
+test('Should return 11', () => {
+  expect(findLongestSubstring('iabciefghijklmnoipqirsti')).toEqual(11);
+});
+
 test('Should return error message if passed in parameter is not s string', () => {
   expect(findLongestSubstring([1, 2, 3])).toEqual('Error: passed in argument is not a string');
 });
