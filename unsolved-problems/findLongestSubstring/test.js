@@ -9,7 +9,7 @@ test('Should return 0 if string is empty string', () => {
 });
 
 test('Should return 4', () => {
-  expect(findLongestSubstring('abcddddddd')).toEqual(0);
+  expect(findLongestSubstring('abcddddddd')).toEqual(4);
 });
 
 test('Should return 26', () => {
@@ -20,11 +20,11 @@ test('Should return 5', () => {
   expect(findLongestSubstring('ilikepie')).toEqual(5);
 });
 
-test('Should return 5', () => {
-  expect(findLongestSubstring('fredflintstone')).toEqual(12);
+test('Should return 9', () => {
+  expect(findLongestSubstring('fredflintstone')).toEqual(9);
 });
 
 test('Should return error message if passed in parameter is not s string', () => {
-  expect(findLongestSubstring([1, 2, 3])).toEqual('Error: passed in parameter is not a string');
+  expect(findLongestSubstring([1, 2, 3])).toEqual('Error: passed in argument is not a string');
 });
 
