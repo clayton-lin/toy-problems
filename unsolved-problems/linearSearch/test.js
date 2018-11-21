@@ -9,7 +9,8 @@ test('Should return correct index 3', () => {
 });
 
 test('Should return correct index 0', () => {
-  expect(linearSearch([10], 10)).toEqual(1);
+  expect(linearSearch([10], 10)).toEqual(0)
+;
 });
 test('Should return -1 if array is empty', () => {
   expect(linearSearch([], 1)).toEqual(-1);
