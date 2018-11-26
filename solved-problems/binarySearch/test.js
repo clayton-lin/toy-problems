@@ -4,7 +4,7 @@ test('binarySearch function should exist', () => {
   expect(binarySearch).toBeDefined();
 });
 
-test('Should return 0 if value 0', () => {
+test('Should return 0 if value 1 exists in array ar index 0', () => {
   expect(binarySearch([1, 2, 3, 4, 5, 6, 7, 8], 1)).toEqual(0);
 });
 
